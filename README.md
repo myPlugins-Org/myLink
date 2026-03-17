@@ -6,10 +6,10 @@
 
 **The bridge between your Minecraft server and Discord.**
 
-[![Kotlin](https://img.shields.io/badge/Kotlin-2.0.21-7F52FF?style=flat-square&logo=kotlin&logoColor=white)](https://kotlinlang.org)
+[![Kotlin](https://img.shields.io/badge/Kotlin-9.0.0-7F52FF?style=flat-square&logo=kotlin&logoColor=white)](https://kotlinlang.org)
 [![Paper](https://img.shields.io/badge/Paper-1.21.11-F7CF0D?style=flat-square&logo=papercms&logoColor=black)](https://papermc.io)
-[![JDA](https://img.shields.io/badge/JDA-5.2.1-5865F2?style=flat-square&logo=discord&logoColor=white)](https://github.com/discord-jda/JDA)
-[![MongoDB](https://img.shields.io/badge/MongoDB-5.2.1-47A248?style=flat-square&logo=mongodb&logoColor=white)](https://www.mongodb.com)
+[![JDA](https://img.shields.io/badge/Integration-5865F2?style=flat-square&logo=discord&logoColor=white)](https://github.com/discord-jda/JDA)
+[![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white)](https://www.mongodb.com)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue?style=flat-square)](LICENSE)
 [![Release](https://img.shields.io/badge/Release-1.0.0--beta-CB54F4?style=flat-square)](https://github.com/myplugins-mc/myLink/releases)
 
