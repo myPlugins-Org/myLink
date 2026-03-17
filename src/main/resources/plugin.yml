@@ -1,0 +1,38 @@
+name: myLink
+version: '${project.version}'
+main: org.myplugins.mylink.MyLinkPlugin
+api-version: '1.21'
+description: The bridge between your Minecraft server and Discord.
+authors: [ myPlugins ]
+website: https://myplugins.org
+
+softdepend:
+  - LuckPerms
+
+commands:
+  link:
+    description: Link your Minecraft account to Discord.
+    usage: /link
+    permission: mylink.link
+  unlink:
+    description: Unlink your Discord account.
+    usage: /unlink
+    permission: mylink.unlink
+  mylink:
+    description: Admin commands for myLink.
+    usage: /mylink <reload|status|forceunlink <player>>
+    permission: mylink.admin
+
+permissions:
+  mylink.link:
+    description: Allows using /link.
+    default: true
+  mylink.unlink:
+    description: Allows using /unlink.
+    default: true
+  mylink.admin:
+    description: Access to admin commands.
+    default: op
+  mylink.bypass:
+    description: Bypasses the join gate and code cooldown.
+    default: false

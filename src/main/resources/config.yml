@@ -1,0 +1,94 @@
+# -----------------------------------------------
+#  myLink — Configuration
+#  Edit and run /mylink reload to apply changes.
+#  Documentation: https://myplugins.org/mylink
+# -----------------------------------------------
+
+# Bot token from https://discord.com/developers/applications
+bot-token: "CHANGE_ME"
+
+# Your Discord server ID
+guild-id: "CHANGE_ME"
+
+# MongoDB connection
+mongodb:
+  uri: "CHANGE_ME"
+  database: "mylink"
+
+# -----------------------------------------------
+#  Account Linking
+# -----------------------------------------------
+linking:
+  code-expiry: 300
+  code-cooldown: 30
+  verify-channel: "CHANGE_ME"
+
+# -----------------------------------------------
+#  Join Gate
+# -----------------------------------------------
+join-gate:
+  enabled: false
+  kick-message: "<red><bold>Account not linked!</bold></red>\n\n<gray>Link your account to play.\n\n<yellow>Your code: <white><bold>%code%</bold></white>\n<yellow>Join our Discord and type: <white>/link %code%"
+  unlink-kick-message: "<red><bold>Account unlinked.</bold></red>\n\n<gray>Your account has been unlinked from our systems.\n<gray>Sync your account again to continue playing.\n\n<yellow>Join our Discord: <white>myplugins.org/discord"
+  bypass-names: []
+  whitelist-bypass: true
+  require-guild-member: true
+  require-roles:
+    enabled: false
+    require-all: false
+    role-ids: []
+    kick-message: "<red>You must have the required Discord role to play!"
+
+# -----------------------------------------------
+#  Chat Bridge
+# -----------------------------------------------
+chat-bridge:
+  enabled: true
+  channel-id: "CHANGE_ME"
+  use-webhooks: true
+  mc-to-dc-format: "**%player%** %message%"
+  dc-to-mc-format: "<dark_gray>[<#9A48CF>Discord</dark_gray>] <white>%user%<gray>: %message%"
+  convert-formatting: true
+
+# -----------------------------------------------
+#  Console Forward
+# -----------------------------------------------
+console:
+  enabled: false
+  channel-id: "CHANGE_ME"
+  whitelist:
+    - "YOUR_DISCORD_ID_HERE"
+  destructive-commands:
+    - "stop"
+    - "restart"
+    - "ban-ip"
+
+# -----------------------------------------------
+#  Group Sync
+# -----------------------------------------------
+group-sync:
+  enabled: false
+  add-command: "lp user %player% parent add %group%"
+  remove-command: "lp user %player% parent remove %group%"
+  mappings:
+    - mc-group: "vip"
+      dc-role: "DISCORD_ROLE_ID"
+    - mc-group: "mvp"
+      dc-role: "DISCORD_ROLE_ID"
+
+# -----------------------------------------------
+#  Messages (MiniMessage format)
+#  https://docs.advntr.dev/minimessage
+# -----------------------------------------------
+messages:
+  link-code: "<#CB54F4>m<#BB50E8>y<#AA4CDB>P<#9A48CF>l<#8944C3>u<#793FB6>g<#683BAA>i<#58379D>n<#473391>s <dark_gray>» <gray>Your code: <white><bold>%code%</bold></white>\n<dark_gray>  » <#9A48CF>Expires in <white>%expiry%s</white> <dark_gray>— <gray>Go to our Discord and type <white>/link %code%"
+  link-already-linked: "<#CB54F4>m<#BB50E8>y<#AA4CDB>P<#9A48CF>l<#8944C3>u<#793FB6>g<#683BAA>i<#58379D>n<#473391>s <dark_gray>» <yellow>Your account is already linked. Use <white>/unlink</white> to remove it."
+  link-cooldown: "<#CB54F4>m<#BB50E8>y<#AA4CDB>P<#9A48CF>l<#8944C3>u<#793FB6>g<#683BAA>i<#58379D>n<#473391>s <dark_gray>» <yellow>Wait <white>%seconds%s</white> before generating a new code."
+  link-success: "<#CB54F4>m<#BB50E8>y<#AA4CDB>P<#9A48CF>l<#8944C3>u<#793FB6>g<#683BAA>i<#58379D>n<#473391>s <dark_gray>» <green>Account linked! Welcome, <white>%player%</white>."
+  unlink-confirm: "<#CB54F4>m<#BB50E8>y<#AA4CDB>P<#9A48CF>l<#8944C3>u<#793FB6>g<#683BAA>i<#58379D>n<#473391>s <dark_gray>» <yellow>Are you sure? Type <white>/unlink confirm</white> to proceed."
+  unlink-success: "<#CB54F4>m<#BB50E8>y<#AA4CDB>P<#9A48CF>l<#8944C3>u<#793FB6>g<#683BAA>i<#58379D>n<#473391>s <dark_gray>» <gray>Your account has been unlinked."
+  unlink-not-linked: "<#CB54F4>m<#BB50E8>y<#AA4CDB>P<#9A48CF>l<#8944C3>u<#793FB6>g<#683BAA>i<#58379D>n<#473391>s <dark_gray>» <yellow>You don't have a linked account."
+  not-linked: "<#CB54F4>m<#BB50E8>y<#AA4CDB>P<#9A48CF>l<#8944C3>u<#793FB6>g<#683BAA>i<#58379D>n<#473391>s <dark_gray>» <yellow>Link your account first. Use <white>/link</white>."
+  no-permission: "<#CB54F4>m<#BB50E8>y<#AA4CDB>P<#9A48CF>l<#8944C3>u<#793FB6>g<#683BAA>i<#58379D>n<#473391>s <dark_gray>» <red>You don't have permission to do that."
+  db-error: "<#CB54F4>m<#BB50E8>y<#AA4CDB>P<#9A48CF>l<#8944C3>u<#793FB6>g<#683BAA>i<#58379D>n<#473391>s <dark_gray>» <red>A database error occurred. Please try again."
+  plugin-loading: "<#CB54F4>m<#BB50E8>y<#AA4CDB>P<#9A48CF>l<#8944C3>u<#793FB6>g<#683BAA>i<#58379D>n<#473391>s <dark_gray>» <yellow>Plugin is still loading, please try again in a moment."
